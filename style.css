@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=B612:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+    margin: 0% 0% 0% 0%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    display: block;
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header .name a h1 {
+    position: relative;
+    top: 50%;
+    left: 60px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.header .name {
+    min-width: 170px;
+}
+
+.header .name a {
+    text-decoration: none;
+}
+
+.header .ghlogo {
+    position: absolute;
+    right: 60px;
+}
+
+.header .ghlogo i {
+    color: black;
+}
+
+.container {
+    position: relative;
+    background: #0a1931;
+    height: 550px;
+}
+
+.container .text-container {
+    background-color: white;
+    position: relative;
+    display: inline-block;
+    background-clip: border-box;
+    border: 2px solid transparent;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    min-height: 400px;
+    width: 60%;
+    border-radius: 2rem;
+    left: 50px;
+    top: 80px;
+}
+
+.container .text-container .intro {
+    font-family: "Varela", sans-serif;
+    color: #000;
+    font-size: 18pt;
+    position: absolute;
+    justify-content: center;
+    top: 50px;
+    left: 50px;
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        background-color: #fff;
+        left: 0px;
+    }
+    .container .text-container {
+        box-shadow: none;
+        background-color: #0a1931;
+        height: 50%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+    }
+    .container .text-container .intro {
+        font-family: "Varela", sans-serif;
+        color: #fff;
+        font-size: 18pt;
+        position: absolute;
+        justify-content: center;
+        top: 50px;
+        left: 50px;
+    }
+}
