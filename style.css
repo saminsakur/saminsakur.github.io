@@ -1,7 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=B612:wght@700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body {
     margin: 0% 0% 0% 0%;
+    /* overflow: hidden; */
+    font-family: 'Poppins', sans-serif;
+    /* cursor: none; */
 }
 
 * {
@@ -11,9 +14,10 @@ body {
 }
 
 .header {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(2px);
-    display: block;
+    background: rgba(51, 51, 51, 0.7);
+    backdrop-filter: blur(14px);
+    z-index: 12;
+    position: fixed;
     height: 8vh;
     width: 100%;
     display: flex;
@@ -22,13 +26,20 @@ body {
 
 .header .name a h1 {
     position: relative;
+    background-clip: unset;
+    font-weight: bolder;
     top: 50%;
     left: 60px;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     letter-spacing: 2px;
-    color: black;
+    color: white;
+    background: linear-gradient(to right top, #43cea2, #185a9d);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    /* text-shadow: 0 0 100px rgba(0, 0, 0, 0.5); */
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .header .name {
@@ -45,51 +56,57 @@ body {
 }
 
 .header .ghlogo i {
-    color: black;
+    color: white;
 }
 
 .container {
     position: relative;
     background: #0a1931;
-    height: 550px;
+    height: 200px;
 }
 
 .container .text-container {
     background-color: white;
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-clip: border-box;
     border: 2px solid transparent;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    min-height: 400px;
-    width: 60%;
+    min-height: 300px;
+    width: 400px;
     border-radius: 2rem;
     left: 50px;
     top: 80px;
 }
 
 .container .text-container .intro {
-    font-family: "Varela", sans-serif;
     color: #000;
-    font-size: 18pt;
-    position: absolute;
-    justify-content: center;
-    top: 50px;
-    left: 50px;
+    font-size: 14pt;
+    position: relative;
+    margin: 20px 20px 20px 40px;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.container .text-container .intro .name {
+    background-clip: unset;
+    background: linear-gradient(to right top, #43cea2, #185a9d);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 @media screen and (max-width:768px) {
     .container {
         background-color: #fff;
-        left: 0px;
     }
     .container .text-container {
         box-shadow: none;
         background-color: #0a1931;
         height: 50%;
         width: 100%;
-        top: 0;
-        left: 0;
         border-radius: 0;
     }
     .container .text-container .intro {
