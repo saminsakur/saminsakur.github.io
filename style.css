@@ -22,10 +22,11 @@ header {
     background: #fff;
     font-family: 'Ubuntu', sans-serif;
     border-bottom: 1px solid #ccc;
+    transition: all 0.3s ease;
 }
 
 .sticky {
-    padding: 30px 0;
+    padding: 15px 0;
     background: #df2b4f;
     color: white;
 }
@@ -34,23 +35,22 @@ h1 a .sticky-state {
     color: white;
 }
 
-header .max-width .menu li .sticky-state {
+header .menu li .sticky-state {
     color: #fff;
 }
 
-header .max-width .menu li {
+header .menu li {
     list-style: none;
     display: inline-block;
     margin-left: 25px;
     border: 2px solid transparent;
 }
 
-header .max-width .menu li a {
-    color: black;
+header .menu li a {
     text-decoration: none;
     font-size: 18px;
     font-weight: 100;
-    transition: border 0.03s ease;
+    color: #fff;
 }
 
 header .menu li a:hover {
@@ -61,6 +61,15 @@ header .max-width {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+
+/* styling menu-btn */
+
+.menu-btn {
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
 }
 
 h1 a {
@@ -113,4 +122,69 @@ h1 {
 
 .home .home-content .text-3 span {
     color: #df2b4f
+}
+
+
+/* styling cursor */
+
+.cursor {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    border: 2px solid #000;
+    border-radius: 50%;
+    z-index: 2999;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.03s ease-out;
+}
+
+
+/*responsive media query */
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    header .menu-btn i {
+        color: #000;
+    }
+    header.sticky .menu-btn i {
+        color: #fff;
+    }
+    header .menu-btn.active i {
+        color: #fff;
+    }
+    header .menu {
+        position: fixed;
+        /* background: #111; */
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: 0.3s ease;
+    }
+    header .menu.active {
+        left: 0;
+    }
+    header .menu li {
+        display: block;
+    }
+    header .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
 }
