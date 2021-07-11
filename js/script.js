@@ -16,7 +16,7 @@ $(document).ready(function() {
     // script to toggle menu when menu icon pressed
     $('.menu-btn').click(function() {
         $("header .menu").toggleClass("active");
-        $("header .menu-btn").toggleClass("active");
+        $(".menu-btn i").toggleClass("active");
     })
 });
 
