@@ -51,10 +51,11 @@ header .menu li a {
     font-size: 18px;
     font-weight: 100;
     color: #000;
+    border-bottom: transparent 2px solid;
 }
 
 header .menu li a:hover {
-    border-bottom: #df2b4f 2px solid;
+    border-color: #df2b4f;
 }
 
 header .max-width {
