@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* header styling */
 
@@ -31,7 +35,7 @@ header {
     color: white;
 }
 
-h1 a .sticky-state {
+header .heading a .sticky-state {
     color: white;
 }
 
@@ -73,12 +77,12 @@ header .max-width {
     display: none;
 }
 
-h1 a {
+.header a {
     text-decoration: none;
     color: #df2b4f;
 }
 
-h1 {
+header h1 {
     font-weight: 40;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
@@ -125,6 +129,60 @@ h1 {
     color: #df2b4f
 }
 
+.home .links a i {
+    color: #000;
+    font-size: 1.4rem;
+    padding: 20px 0;
+}
+
+
+/* styling scroll down button */
+
+a .scroll-down {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb05 1.5s infinite;
+    animation: sdb05 1.5s infinite;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+@-webkit-keyframes sdb05 {
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+
+@keyframes sdb05 {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-45deg) translate(-20px, 20px);
+        opacity: 0;
+    }
+}
+
 
 /* About section styling */
 
@@ -132,12 +190,13 @@ section {
     padding: 100px 0;
 }
 
-.about {
-    font-family: "Poppins", sans-serif;
-}
-
 .about .title {
     font-family: "Ubuntu", sans-serif;
+    text-align: center;
+}
+
+.about {
+    font-family: "Poppins", sans-serif;
     text-align: center;
 }
 
