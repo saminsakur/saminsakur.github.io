@@ -58,7 +58,7 @@ header .menu li a {
   font-size: 18px;
   font-weight: 100;
   color: #000;
-  border-bottom: transparent 2px solid;
+  border-bottom: transparent 3px solid;
   transition: border 0.3s ease;
 }
 
@@ -132,10 +132,14 @@ header h1 {
   color: #df2b4f;
 }
 
-.home .links a i {
+.home .links a i.github-icon{
   color: #000;
   font-size: 1.4rem;
   padding: 20px 0;
+}
+
+.home .links a i.github-icon:hover{
+  color: #171515;
 }
 
 /* styling scroll down button */
@@ -219,6 +223,17 @@ section {
 .about .about-content p{
   text-align: justify;
 }
+
+/* Footer section styling */
+
+footer{
+  background: #111;
+  padding: 15px 23px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
 
 /* styling cursor */
 
