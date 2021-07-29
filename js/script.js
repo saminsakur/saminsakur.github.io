@@ -23,9 +23,9 @@ $(document).ready(function() {
 
     // typing Animation script
     var typed = new Typed(".typing", {
-        strings: ["Student", "Coder", "Web developer"],
-        typeSpeed: 100,
-        backSpeed: 60,
+        strings: ["Student", "Programmer", "Web developer"],
+        typeSpeed: 90,
+        backSpeed: 100,
         loop: true
     });
 });
