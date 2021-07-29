@@ -49,17 +49,18 @@ header .menu li .sticky-state {
 header .menu li {
   list-style: none;
   display: inline-block;
-  margin-left: 25px;
   border: 2px solid transparent;
 }
 
 header .menu li a {
+  display: block;
   text-decoration: none;
   font-size: 18px;
   font-weight: 100;
   color: #000;
   border-bottom: transparent 3px solid;
   transition: border 0.3s ease;
+  margin-left: 25px;
 }
 
 header .menu li a:hover {
@@ -282,6 +283,10 @@ footer{
   header .menu-btn i.active {
     color: #fff;
   }
+  header .menu-btn i.active:hover{
+    color: #df2b4f;
+    transition: color 0.3s ease;
+  }
   header .menu {
     position: fixed;
     /* background: #111; */
@@ -293,12 +298,13 @@ footer{
     left: -100%;
     top: 0;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 200px;
     transition: all 0.3s ease;
   }
   /* To look menu items white when menu opened */
   header .menu.active li a {
     color: #fff;
+    font-weight: 500;
   }
   /* show when menu btn pressed */
   header .menu.active {

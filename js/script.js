@@ -1,5 +1,3 @@
-let mouseCursor = document.querySelector('.cursor')
-
 $(document).ready(function() {
     $(window).scroll(function() {
         if ($(window).scrollTop() > 20) {
@@ -21,10 +19,13 @@ $(document).ready(function() {
     $('.menu-btn').click(function() {
         $("header .menu").toggleClass("active");
         $(".menu-btn i").toggleClass("active");
-    })
-});
+    });
 
-window.addEventListener("mousemove", function(e) {
-    mouseCursor.style.top = e.pageY + "px"
-    mouseCursor.style.left = e.pageX + "px"
+    // typing Animation script
+    var typed = new Typed(".typing", {
+        strings: ["Student", "Coder", "Creative programmer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
 });
