@@ -56,13 +56,18 @@ header .menu li a {
   display: block;
   text-decoration: none;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 300;
+  font-family: "Ubuntu";
   color: #000;
   border-bottom: transparent 3px solid;
   transition: border 0.3s ease;
   margin-left: 25px;
 }
 
+header.sticky li a{
+  color: #fff;
+  font-weight: 500;
+}
 header .menu li a:hover {
   border-color: #df2b4f;
 }
