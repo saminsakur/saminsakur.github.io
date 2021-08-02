@@ -1,9 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
-* {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&family=Ubuntu:wght@300;400;700&display=swap");
+*,
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 html {
@@ -140,17 +143,18 @@ header h1 {
 
 /* Style links */
 
-.home a.sl-link, .home a.gh-link {
+.home a.sl-link,
+.home a.gh-link {
   text-decoration: none;
 }
 
-.home ul.links{
+.home ul.links {
   list-style: none;
   padding: 20px 0;
   display: flex;
 }
 
-.home i.github-icon{
+.home i.github-icon {
   color: #000;
   font-size: 1.4rem;
   padding-right: 1.5rem;
@@ -160,14 +164,14 @@ header h1 {
   color: #171515;
 }
 
-.home a.sl-link img.sl-icon{
+.home a.sl-link img.sl-icon {
   height: 1.2rem;
   width: 1.2rem;
   vertical-align: middle;
   margin-right: 1.5rem;
 }
 
-.home .links .sololearn-link-container{
+.home .links .sololearn-link-container {
   position: relative;
   display: inline-block;
 }
@@ -177,11 +181,11 @@ header h1 {
   vertical-align: middle;
 }
 
-.home .sl-link:hover img.sl-icon{
+.home .sl-link:hover img.sl-icon {
   display: none;
 }
 
-.home .sl-link .sl-icon-hover{
+.home .sl-link .sl-icon-hover {
   display: none;
   position: absolute;
   top: 2px;
@@ -272,7 +276,7 @@ section {
 }
 
 .about .about-content p {
-  text-align: justify;
+  text-align: center;
 }
 
 /* Footer section styling */
@@ -283,8 +287,14 @@ footer {
   color: #fff;
   text-align: center;
   font-family: "Poppins", sans-serif;
+  text-align: center;
 }
 
+footer .fa-heart {
+  color: red;
+  font-size: 1.2rem;
+  display: inline-block;
+}
 /* styling cursor */
 
 .cursor {
