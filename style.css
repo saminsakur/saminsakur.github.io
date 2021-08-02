@@ -64,7 +64,7 @@ header .menu li a {
   margin-left: 25px;
 }
 
-header.sticky li a{
+header.sticky li a {
   color: #fff;
   font-weight: 500;
 }
@@ -138,14 +138,59 @@ header h1 {
   color: #df2b4f;
 }
 
-.home .links a i.github-icon{
-  color: #000;
-  font-size: 1.4rem;
-  padding: 20px 0;
+/* Style links */
+
+.home a.sl-link, .home a.gh-link {
+  text-decoration: none;
 }
 
-.home .links a i.github-icon:hover{
+.home ul.links{
+  list-style: none;
+  padding: 20px 0;
+  display: flex;
+}
+
+.home i.github-icon{
+  color: #000;
+  font-size: 1.4rem;
+  padding-right: 1.5rem;
+}
+
+.home i.github-icon:hover {
   color: #171515;
+}
+
+.home a.sl-link img.sl-icon{
+  height: 1.2rem;
+  width: 1.2rem;
+  vertical-align: middle;
+  margin-right: 1.5rem;
+}
+
+.home .links .sololearn-link-container{
+  position: relative;
+  display: inline-block;
+}
+
+.home .sl-link:hover img.sl-icon-hover {
+  display: inline;
+  vertical-align: middle;
+}
+
+.home .sl-link:hover img.sl-icon{
+  display: none;
+}
+
+.home .sl-link .sl-icon-hover{
+  display: none;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  z-index: 99;
+  height: 1.2rem;
+  width: 1.2rem;
+  vertical-align: middle;
+  margin-right: 1.5rem;
 }
 
 /* styling scroll down button */
@@ -171,7 +216,7 @@ header h1 {
   cursor: pointer;
 }
 
-.home .scroll-down a{
+.home .scroll-down a {
   padding: 20px;
 }
 
@@ -226,20 +271,19 @@ section {
   text-align: center;
 }
 
-.about .about-content p{
+.about .about-content p {
   text-align: justify;
 }
 
 /* Footer section styling */
 
-footer{
+footer {
   background: #111;
   padding: 15px 23px;
   color: #fff;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
 
 /* styling cursor */
 
@@ -262,9 +306,6 @@ footer{
   }
 }
 
-@media (max-width: 1104px) {
-
-}
 @media (max-width: 991px) {
   .max-width {
     padding: 0 50px;
@@ -288,7 +329,7 @@ footer{
   header .menu-btn i.active {
     color: #fff;
   }
-  header .menu-btn i.active:hover{
+  header .menu-btn i.active:hover {
     color: #df2b4f;
     transition: color 0.3s ease;
   }
@@ -329,8 +370,8 @@ footer{
   .home .home-content .text-3 {
     font-size: 35px;
   }
-  .max-width{
-    max-width: 800px;
+  .max-width {
+    max-width: 930px;
   }
 }
 
