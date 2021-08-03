@@ -95,7 +95,7 @@ header .max-width {
 }
 
 header h1 {
-  font-weight: 40;
+  font-weight: 100;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-size: 35px;
@@ -188,7 +188,7 @@ header h1 {
 .home .sl-link .sl-icon-hover {
   display: none;
   position: absolute;
-  top: 2px;
+  top: 1px;
   left: 0;
   z-index: 99;
   height: 1.2rem;
