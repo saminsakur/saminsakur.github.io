@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&family=Ubuntu:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 *,
 ::after,
 ::before {
@@ -95,14 +96,11 @@ header .max-width {
 }
 
 header h1 {
-  font-weight: 300;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   font-size: 35px;
   letter-spacing: 2px;
-  /* background: linear-gradient(to right top, #43cea2, #185a9d);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text; */
 }
 
 /* Style home section */
@@ -119,6 +117,9 @@ header h1 {
 .home .max-width {
   width: 100%;
 }
+.home .home-content .text-1, .home .home-content .text-2, .home .home-content .text-3{
+  font-family: "ubuntu",  sans-serif;
+}
 
 .home .home-content .text-1 {
   font-size: 27px;
@@ -134,6 +135,9 @@ header h1 {
 .home .home-content .text-3 {
   font-size: 40px;
   margin: 5px 0;
+}
+
+.home .home-content .text-3{
   color: #5f5f64;
 }
 
@@ -295,19 +299,6 @@ footer .fa-heart {
   font-size: 1.2rem;
   display: inline-block;
 }
-/* styling cursor */
-
-.cursor {
-  position: absolute;
-  height: 2rem;
-  width: 2rem;
-  border: 2px solid #000;
-  border-radius: 50%;
-  z-index: 2999;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: all 0.03s ease-out;
-}
 
 /*responsive media query */
 @media (max-width: 1300px) {
@@ -401,9 +392,6 @@ footer .fa-heart {
   .home .home-content a {
     font-size: 20px;
   }
-  .services .serv-content .card {
-    width: 100%;
-  }
 }
 
 @media (max-width: 500px) {
@@ -417,6 +405,12 @@ footer .fa-heart {
     font-size: 50px;
   }
   .home .home-content .text-3 {
-    font-size: 24px;
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 361px){
+  .home .home-content .text-3 {
+    font-size: 25px;
   }
 }
