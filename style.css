@@ -117,7 +117,7 @@ header h1 {
 .home .max-width {
   width: 100%;
 }
-.home .home-content .text-1, .home .home-content .text-2, .home .home-content .text-3{
+.home .home-content .text-1, .home .home-content .text-3{
   font-family: "ubuntu",  sans-serif;
 }
 
@@ -126,6 +126,7 @@ header h1 {
 }
 
 .home .home-content .text-2 {
+  font-family: "Montserrat", "Ubuntu", sans-serif;
   font-size: 75px;
   font-weight: 300;
   margin-left: -3px;
