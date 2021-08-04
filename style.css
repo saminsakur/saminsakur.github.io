@@ -34,6 +34,32 @@ html {
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #555;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  z-index: 4999;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
 }
 
 .max-width {
@@ -325,6 +351,12 @@ footer .fa-heart {
 }
 
 @media (max-width: 947px) {
+  .spinner{
+    height: 80px;
+    width: 80px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #555;
+  }
   .menu-btn {
     display: block;
     z-index: 999;
@@ -406,6 +438,13 @@ footer .fa-heart {
 }
 
 @media (max-width: 500px) {
+  .spinner{
+    height: 60px;
+    width: 60px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #555;
+  }
+
   header h1 {
     font-size: 30px;
   }
