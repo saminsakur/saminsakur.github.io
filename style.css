@@ -38,6 +38,7 @@ html {
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  z-index: 9999;
 }
 
 .spinner {
@@ -48,7 +49,7 @@ html {
   height: 100px;
   -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
-  z-index: 4999;
+  z-index: 10000;
 }
 
 /* Safari */
