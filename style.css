@@ -477,6 +477,9 @@ footer .fa-heart {
   header h1 {
     font-size: 27px;
   }
+  .home .home-content .text-1{
+    font-size: 25px;
+  }
   .home .home-content .text-2 {
     font-size: 44px;
   }
