@@ -496,7 +496,7 @@ footer .fa-heart {
     font-size: 43px;
   }
   .home .home-content .text-3 {
-    font-size: 22px;
+    font-size: 23px;
   }
 }
 
@@ -504,9 +504,6 @@ footer .fa-heart {
 
 @media (max-width: 320px) {
   .home .home-content .text-2 {
-    font-size: 43px;
-  }
-  .home .home-content .text-3 {
-    font-size: 23px;
+    font-size: 42px;
   }
 }
