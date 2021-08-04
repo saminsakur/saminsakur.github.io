@@ -315,18 +315,14 @@ section {
 
 .about .title {
   font-family: "Ubuntu", sans-serif;
-  font-size: 40px;
-  font-weight: 500;
-  padding-bottom: 20px;
+  font-size: 50px;
+  font-weight: 100;
+  padding-bottom: 40px;
   text-align: center;
 }
 
-.about {
+.about p {
   font-family: "Poppins", sans-serif;
-  text-align: center;
-}
-
-.about .about-content p {
   text-align: center;
 }
 
