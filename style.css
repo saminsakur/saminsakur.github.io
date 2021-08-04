@@ -10,6 +10,20 @@
   -moz-box-sizing: border-box;
 }
 
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -30,25 +44,18 @@ header {
   width: 100%;
   z-index: 999;
   padding: 30px 0;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.31);
   font-family: "Ubuntu", sans-serif;
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
   transition: all 0.3s ease;
 }
 
 .sticky {
   padding: 15px 0;
   background: #df2b4f;
-  color: white;
-}
-
-header .heading a .sticky-state {
-  color: white;
-}
-
-header .menu li .sticky-state {
   color: #fff;
 }
+
 
 header .menu li {
   list-style: none;
@@ -60,18 +67,14 @@ header .menu li a {
   display: block;
   text-decoration: none;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   font-family: "Ubuntu";
-  color: #000;
+  color: #fff;
   border-bottom: transparent 3px solid;
   transition: border 0.3s ease;
   margin-left: 25px;
 }
 
-header.sticky li a {
-  color: #fff;
-  font-weight: 500;
-}
 header .menu li a:hover {
   border-color: #df2b4f;
 }
@@ -92,22 +95,28 @@ header .max-width {
 
 .header a {
   text-decoration: none;
-  color: #df2b4f;
 }
 
 header h1 {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 35px;
   letter-spacing: 2px;
+  color: #df2b4f;
+}
+
+header.sticky h1{
+  color: #fff;
 }
 
 /* Style home section */
 
 .home {
   display: flex;
-  background-color: white;
+  background: url("Images/home-background.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
   color: #000;
   min-height: 500px;
@@ -117,8 +126,9 @@ header h1 {
 .home .max-width {
   width: 100%;
 }
-.home .home-content .text-1, .home .home-content .text-3{
+.home .home-content .text-1, .home .home-content .text-2, .home .home-content .text-3{
   font-family: "ubuntu",  sans-serif;
+  color: #fff;
 }
 
 .home .home-content .text-1 {
@@ -128,18 +138,13 @@ header h1 {
 .home .home-content .text-2 {
   font-family: "Montserrat", "Ubuntu", sans-serif;
   font-size: 75px;
-  font-weight: 300;
+  font-weight: 400;
   margin-left: -3px;
-  color: #df2b4f;
 }
 
 .home .home-content .text-3 {
   font-size: 40px;
   margin: 5px 0;
-}
-
-.home .home-content .text-3{
-  color: #5f5f64;
 }
 
 .home .home-content .text-3 span {
@@ -160,13 +165,13 @@ header h1 {
 }
 
 .home i.github-icon {
-  color: #000;
+  color: #fff;
   font-size: 1.4rem;
   padding-right: 1.5rem;
 }
 
 .home i.github-icon:hover {
-  color: #171515;
+  color: #e7e2e2;
 }
 
 .home a.sl-link img.sl-icon {
@@ -215,8 +220,8 @@ header h1 {
   width: 24px;
   height: 24px;
   margin-left: -12px;
-  border-left: 1px solid rgba(0, 0, 0, 0.9);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+  border-left: 1px solid rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: scrollDown 1.5s infinite;
@@ -323,7 +328,7 @@ footer .fa-heart {
     content: "\f00d";
   }
   header .menu-btn i {
-    color: #000;
+    color: #fff;
   }
   header.sticky .menu-btn i {
     color: #fff;
@@ -411,6 +416,9 @@ footer .fa-heart {
 }
 
 @media (max-width: 361px){
+  header h1{
+    font-size: 27px;
+  }
   .home .home-content .text-3 {
     font-size: 25px;
   }
