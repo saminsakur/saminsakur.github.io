@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&family=Ubuntu:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&family=Ubuntu:wght@300;400;500;700&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
 *,
 ::after,
 ::before {
@@ -106,7 +105,7 @@ header .menu li a {
   display: block;
   text-decoration: none;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
   font-family: "Ubuntu";
   color: #fff;
   border-bottom: transparent 3px solid;
@@ -170,6 +169,7 @@ header.sticky h1 {
 .home .home-content .text-3 {
   font-family: "ubuntu", sans-serif;
   color: #fff;
+  font-weight: 400;
 }
 
 .home .home-content .text-1 {
@@ -465,10 +465,10 @@ footer .fa-heart {
     display: none;
   }
   .home .home-content .text-2 {
-    font-size: 50px;
+    font-size: 47px;
   }
   .home .home-content .text-3 {
-    font-size: 27px;
+    font-size: 25px;
   }
 }
 
@@ -478,10 +478,10 @@ footer .fa-heart {
     font-size: 27px;
   }
   .home .home-content .text-2 {
-    font-size: 46px;
+    font-size: 44px;
   }
   .home .home-content .text-3 {
-    font-size: 25px;
+    font-size: 23px;
   }
 }
 
@@ -489,10 +489,10 @@ footer .fa-heart {
 
 @media (max-width: 340px) {
   .home .home-content .text-2 {
-    font-size: 43px;
+    font-size: 40px;
   }
   .home .home-content .text-3 {
-    font-size: 23px;
+    font-size: 21px;
   }
 }
 
@@ -500,6 +500,6 @@ footer .fa-heart {
 
 @media (max-width: 320px) {
   .home .home-content .text-2 {
-    font-size: 42px;
+    font-size: 38px;
   }
 }
