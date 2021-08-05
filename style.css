@@ -22,7 +22,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
+::selection {
+  background: #df2b4f;
+  color: #fff;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -30,14 +33,14 @@ html {
 .loader-wrapper {
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  z-index: 9999;
+  z-index: 99999999999;
 }
 
 .spinner {
@@ -47,8 +50,9 @@ html {
   width: 100px;
   height: 100px;
   -webkit-animation: spin 2s linear infinite; /* Safari */
+  -moz-animation: spin 2s linear infinite; /* Firefox */
   animation: spin 2s linear infinite;
-  z-index: 10000;
+  z-index: 999999999999;
 }
 
 /* Safari */
@@ -58,6 +62,16 @@ html {
   }
   100% {
     -webkit-transform: rotate(360deg);
+  }
+}
+
+/* Firefox */
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
   }
 }
 
@@ -150,13 +164,13 @@ header.sticky h1 {
 
 /* Style home section */
 
-.home {
+section.home {
   display: flex;
   background: url("Images/home-background.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
-  color: #000;
+  color: #fff;
   min-height: 500px;
   font-family: "Ubuntu", sans-serif;
 }
@@ -239,7 +253,7 @@ header.sticky h1 {
 .home .sl-link .sl-icon-hover {
   display: none;
   position: absolute;
-  top: 10%;
+  top: 7.14%;
   left: 0;
   z-index: 99;
   height: 1.2rem;
@@ -274,7 +288,7 @@ header.sticky h1 {
 .home .scroll-down a {
   padding: 20px;
 }
-
+/* Safari */
 @-webkit-keyframes scrollDown {
   0% {
     -webkit-transform: rotate(-45deg) translate(0, 0);
@@ -477,7 +491,7 @@ footer .fa-heart {
   header h1 {
     font-size: 27px;
   }
-  .home .home-content .text-1{
+  .home .home-content .text-1 {
     font-size: 25px;
   }
   .home .home-content .text-2 {
