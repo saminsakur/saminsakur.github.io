@@ -40,7 +40,7 @@ html {
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  z-index: 99999999999;
+  z-index: 99999999999999;
 }
 
 .spinner {
@@ -52,7 +52,7 @@ html {
   -webkit-animation: spin 2s linear infinite; /* Safari */
   -moz-animation: spin 2s linear infinite; /* Firefox */
   animation: spin 2s linear infinite;
-  z-index: 999999999999;
+  z-index: 999999999999999;
 }
 
 /* Safari */
@@ -166,12 +166,14 @@ header.sticky h1 {
 
 section.home {
   display: flex;
-  background: url("Images/home-background.jpg") no-repeat center;
+  background: url("Images/home-background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
   color: #fff;
-  min-height: 500px;
+  min-height: 100vh;
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -179,7 +181,6 @@ section.home {
   width: 100%;
 }
 .home .home-content .text-1,
-.home .home-content .text-2,
 .home .home-content .text-3 {
   font-family: "ubuntu", sans-serif;
   color: #fff;
@@ -285,9 +286,6 @@ section.home {
   cursor: pointer;
 }
 
-.home .scroll-down a {
-  padding: 20px;
-}
 /* Safari */
 @-webkit-keyframes scrollDown {
   0% {
