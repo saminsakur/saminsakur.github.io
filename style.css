@@ -149,7 +149,7 @@ header .max-width {
   text-decoration: none;
 }
 
-header h1 {
+header h1 a{
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -158,7 +158,7 @@ header h1 {
   color: #df2b4f;
 }
 
-header.sticky h1 {
+header.sticky h1 a{
   color: #fff;
 }
 
@@ -470,7 +470,7 @@ footer .fa-heart {
     border-top: 4px solid #555;
   }
 
-  header h1 {
+  header h1 a{
     font-size: 30px;
   }
   .cursor {
@@ -486,7 +486,7 @@ footer .fa-heart {
 
 /* for small display phones */
 @media (max-width: 360px) {
-  header h1 {
+  header h1 a{
     font-size: 27px;
   }
   .home .home-content .text-1 {
