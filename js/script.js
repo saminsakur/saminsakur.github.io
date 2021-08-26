@@ -8,7 +8,7 @@ $(document).ready(function() {
         } else {
             $("header").removeClass("sticky");
         }
-        if ($(window).scrollTop() > 200) {
+        if ($(window).scrollTop() >= 100) {
             $(".scroll-down").addClass("no-display");
         } else {
             $(".scroll-down").removeClass("no-display");
