@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&family=Ubuntu:wght@300;400;500;700&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
-:root{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&family=var(--secondary-font):wght@300;400;500;700&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+:root {
   --accent-color: #df2b4f;
+  --secondary-font: "Ubuntu";
+  --text-font: "Poppins";
 }
 *,
 ::after,
@@ -101,7 +103,7 @@ header {
   z-index: 999;
   padding: 25px 0;
   background: rgba(0, 0, 0, 0.31);
-  font-family: "Ubuntu", sans-serif;
+  font-family: var(--secondary-font, "cursive"), sans-serif;
   /* border-bottom: 1px solid #ccc; */
   transition: all 0.3s ease;
 }
@@ -124,7 +126,7 @@ header .menu li a {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
-  font-family: "Ubuntu";
+  font-family: var(--secondary-font);
   color: #fff;
   border-bottom: transparent 3px solid;
   transition: border 0.3s ease;
@@ -132,36 +134,36 @@ header .menu li a {
   padding: 6px 0;
 }
 
-header .menu li a::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: var(--accent-color);
-    opacity: 0;
-    transition: opacity 300ms, transform 300ms;
+header .menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent-color);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
 }
 
 header .menu li a:hover::after,
 header .menu li a:focus::after {
-	opacity: 1;
-	transform: translate3d(0, 0.2em, 0);
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
 }
 
 header .menu li a {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 header .menu li a::after {
-	opacity: 1;
-	transform: translate3d(-100%, 0, 0);
+  opacity: 1;
+  transform: translate3d(-100%, 0, 0);
 }
 
 header .menu li a:hover::after,
-header .menu li a:focus::after{
-	transform: translate3d(0, 0, 0);
+header .menu li a:focus::after {
+  transform: translate3d(0, 0, 0);
 }
 
 header .max-width {
@@ -182,7 +184,7 @@ header .max-width {
   text-decoration: none;
 }
 
-header h1 a{
+header h1 a {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -191,7 +193,7 @@ header h1 a{
   color: var(--accent-color);
 }
 
-header.sticky h1 a{
+header.sticky h1 a {
   color: #fff;
 }
 
@@ -207,7 +209,7 @@ section.home {
   height: 100vh;
   color: #fff;
   min-height: 100vh;
-  font-family: "Ubuntu", sans-serif;
+  font-family: var(--secondary-font), sans-serif;
 }
 
 .home .max-width {
@@ -215,7 +217,7 @@ section.home {
 }
 .home .home-content .text-1,
 .home .home-content .text-3 {
-  font-family: "ubuntu", sans-serif;
+  font-family: var(--secondary-font), sans-serif;
   color: #fff;
   font-weight: 400;
 }
@@ -225,7 +227,7 @@ section.home {
 }
 
 .home .home-content .text-2 {
-  font-family: "Montserrat", "Ubuntu", sans-serif;
+  font-family: "Montserrat", var(--secondary-font), sans-serif;
   font-size: 75px;
   font-weight: 400;
   margin-left: -3px;
@@ -349,9 +351,9 @@ section.home {
 }
 
 .scroll-down a {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
 }
 
 section {
@@ -365,7 +367,7 @@ section {
 }
 
 .about .title {
-  font-family: "Ubuntu", sans-serif;
+  font-family: var(--secondary-font), sans-serif;
   font-size: 50px;
   font-weight: 100;
   padding-bottom: 40px;
@@ -373,13 +375,13 @@ section {
 }
 
 .about p {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--text-font), sans-serif;
   text-align: center;
   font-size: 1rem;
 }
 
-.about p span.bold{
-    font-weight: 500;
+.about p span.bold {
+  font-weight: 500;
 }
 
 /* Footer section styling */
@@ -389,7 +391,7 @@ footer {
   padding: 15px 23px;
   color: #fff;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--text-font), sans-serif;
   text-align: center;
 }
 
@@ -398,7 +400,7 @@ footer .fa-heart {
   font-size: 1.2rem;
   display: inline-block;
 }
-footer a{
+footer a {
   text-decoration: none;
   color: var(--accent-color);
 }
@@ -517,7 +519,7 @@ footer a{
     border-top: 4px solid #555;
   }
 
-  header h1 a{
+  header h1 a {
     font-size: 30px;
   }
   .cursor {
@@ -533,7 +535,7 @@ footer a{
 
 /* for small display phones */
 @media (max-width: 360px) {
-  header h1 a{
+  header h1 a {
     font-size: 27px;
   }
   .home .home-content .text-1 {
