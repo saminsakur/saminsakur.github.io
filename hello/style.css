@@ -66,7 +66,7 @@
   --card-color: hsl(260deg 100% 3%);
   --text-color: hsl(260deg 10% 55%);
   --card-radius: 3.6vw;
-  --card-width: 70vw;
+  --card-width: 40vw;
   --border-width: 3px;
   --bg-size: 1;
   --hue: 0;
@@ -76,7 +76,7 @@
   --interaction-speed: 0.55s;
   --glow-scale: 1.5;
   --scale-factor: 1;
-  --glow-blur: 6;
+  --glow-blur: 0;
   --glow-opacity: 1;
   --glow-radius: 100;
   --glow-rotate-unit: 1deg;
@@ -140,8 +140,8 @@ body {
 
 body > div.card-layout {
   width: var(--card-width);
-  width: min(380px, 90vw);
-  aspect-ratio: 9/16;
+  width: min(600px, 95vw);
+  aspect-ratio: 9/19;
   color: white;
   margin: auto;
   display: flex;
@@ -167,7 +167,7 @@ body > div.card-layout:hover .glow {
   --glow-blur: 8;
   --glow-opacity: 0.3;
   --glow-scale: 2.5;
-  --glow-radius: 0;
+  --glow-radius: 0.9;
   --rotate: 900;
   --glow-rotate-unit: 0;
   --scale-factor: 1.25;
@@ -198,8 +198,8 @@ body > div.card-layout > div {
   font-weight: 800;
   text-transform: uppercase;
   font-stretch: 150%;
-  font-size: 18px;
-  font-size: clamp(1.5vw, 1.5vmin, 32px);
+  font-size: 18%;
+  font-size: clamp(1.8vw, 1.8vmin, 50px);
   color: var(--text-color);
   padding: calc(var(--card-width) / 8);
 }
@@ -327,19 +327,25 @@ body > div.card-layout .glow:after {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
 }
 .container .greeting {
-  font-size: clamp(1.5vw, 1.5vmin, 32px);
+  font-size: clamp(24px, 5vw, 42px);
   font-weight: 800;
   text-transform: uppercase;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right:20px;
 }
 .container .intro {
-  font-size: 1em;
+  font-size: clamp(16px, 3.5vw, 28px);
   font-weight: 400;
   color: var(--text-color);
-  margin-bottom: 1em;
-  max-width: 300px;
+  margin-bottom: 1.5em;
+  max-width: min(85%, 400px);
+  padding: 0 1rem;
 }
 .container .social-links {
   display: flex;
@@ -348,15 +354,14 @@ body > div.card-layout .glow:after {
   justify-content: center;
 }
 .container .social-links a {
-    font-size: 3vw;
-
   color: var(--text-color);
   text-decoration: none;
   font-weight: 600;
-  padding: 0.3em 0.6em;
-  border-radius: 4px;
+  padding: 0.5em 1em;
+  border-radius: 6px;
   background: rgba(255, 255, 255, 0.05);
   transition: background 0.3s ease, transform 0.2s ease;
+  font-size: clamp(16px, 3.3vw, 45px);
 }
 .container .social-links a:hover {
   background: rgba(255, 255, 255, 0.15);
@@ -396,13 +401,14 @@ body > div > div {
   margin: 0.5em 0;
 }
 .profile-image img {
-    object-fit: cover;
-        width: clamp(80px, 70%, 350px);
+  object-fit: cover;
+  width: clamp(120px, 55vw, 350px);
   height: auto;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease;
+  margin-bottom: 2rem;
 }
 .profile-image img:hover {
   transform: scale(1.05);
