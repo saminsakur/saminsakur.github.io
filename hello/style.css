@@ -331,6 +331,8 @@ body > div.card-layout .glow:after {
   padding-bottom: 8vh;
 }
 .container .greeting {
+        margin-top: auto;
+
   font-size: clamp(24px, 5vw, 42px);
   font-weight: 800;
   text-transform: uppercase;
@@ -340,6 +342,8 @@ body > div.card-layout .glow:after {
   padding-right:20px;
 }
 .container .intro {
+        margin-top: auto;
+
   font-size: clamp(16px, 3.5vw, 28px);
   font-weight: 400;
   color: var(--text-color);
@@ -348,6 +352,8 @@ body > div.card-layout .glow:after {
   padding: 0 1rem;
 }
 .container .social-links {
+        margin-top: auto;
+
   display: flex;
   gap: 1em;
   flex-wrap: wrap;
@@ -366,6 +372,32 @@ body > div.card-layout .glow:after {
 .container .social-links a:hover {
   background: rgba(255, 255, 255, 0.15);
   transform: scale(1.1);
+}
+
+.container .social-links a:hover i {
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
+}
+.container .social-links a.gihub:hover i{
+    color: #181717;
+    filter: drop-shadow(0 0 4px #181717);
+
+}
+.container .social-links a.linkedin:hover i{
+    color: #0A66C2;
+    filter: drop-shadow(0 0 4px #0A66C2);
+}
+.container .social-links a.facebook:hover i{
+    color: #1877F2;
+    filter: drop-shadow(0 0 4px #1877F2);
+
+}
+.container .social-links a.mail:hover i{
+    color: #D14836;
+    filter: drop-shadow(0 0 4px #D14836);
+}
+.container .social-links a.tel:hover i{
+    color: #1ed760;
+    filter: drop-shadow(0 0 4px #1ed760)
 }
 
 body > div > div {
@@ -394,6 +426,8 @@ body > div > div {
 }
 
 .profile-image {
+        margin-top: auto;
+
   /* avatar container takes full width but image is constrained */
   width: 100%;
   display: flex;
@@ -401,6 +435,7 @@ body > div > div {
   margin: 0.5em 0;
 }
 .profile-image img {
+
   object-fit: cover;
   width: clamp(120px, 55vw, 350px);
   height: auto;
@@ -408,8 +443,35 @@ body > div > div {
   border-radius: 50%;
   border: 3px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
+  margin-top: auto;
 }
 .profile-image img:hover {
   transform: scale(1.05);
+}
+
+.portfolio {
+    margin-top: auto;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: clamp(16px, 3.3vw, 45px);
+}
+
+.portfolio:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
+}
+.outlined-text {
+  color: transparent; /* Text color */
+  text-shadow: 
+    2px 2px 0 black, 
+   -2px 2px 0 black, 
+    2px -2px 0 black, 
+   -2px -2px 0 black; /* Shadows for all directions */
 }
